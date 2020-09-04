@@ -154,6 +154,38 @@ locales.forEach(e => {
 </li>
     `);
 
+    $j('#ubicacion-locales').append(`
+            <div class="col-md-6">
+            <div class="card mb-3 shadow" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 p-2 mt-5">
+                        <img src="./images/logo.jpg" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">${e.nombre}</h5>
+                            <p class="card-text">${e.descripcion}</p>
+                           <div class="p-1 rounded" style="background-color: gray; color: white !important;">
+                                <h2 style="color: white;">${e.direccion}</h2>
+                                <h2 style="color: white;">${e.telefono}</h2>    
+                           </div>          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `);
 
-
+    $j('#menu-locales').append(`
+        <div class="col-4 mt-2">
+        <div class="card shadow p-2" style="width: 18rem; align-items: center;">
+            <img src="./images/logo.jpg" style="width: 150px; height: 150px;" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">${e.nombre}</h5>
+                <p class="card-text">${e.direccion} ${e.telefono}</p>
+                <a href="#" class="btn btn-dark shadow">Ver menu de <span style="color: #FF9900">${e.nombre}</span></a>
+            </div>
+        </div>
+    </div>
+    `);
 });
